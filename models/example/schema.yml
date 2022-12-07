@@ -1,21 +1,10 @@
-
 version: 2
 
-models:
-    - name: my_first_dbt_model
-      description: "A starter dbt model"
-      columns:
-          - name: id
-            description: "The primary key for this table"
-            tests:
-                - unique
-                - not_null
-
-    - name: my_second_dbt_model
-      description: "A starter dbt model"
-      columns:
-          - name: id
-            description: "The primary key for this table"
-            tests:
-                - unique
-                - not_null
+sources:
+  - name: DEVELOPER_DB
+    description: <markdown_string>
+    database: DEVELOPER_DB
+    schema: AKHIL_SCHEMA
+    tables:
+      - name: US_ACCIDENT_DATA_RAW_STAGE
+      - name: STAGE_US_DATA
